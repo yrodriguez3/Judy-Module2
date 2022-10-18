@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lorange Module 2 Solution</title>
 <style>
-
-/********** Base styles **********/
 * 
 {
   box-sizing: border-box;
+  margin: auto;
 }
 
 h1 
@@ -23,85 +22,84 @@ h1
   color: #ff8d42;
   margin-bottom: 15px;
 }
-/*********************************************************************
-    menu content area formattin
- *********************************************************************/
+body
+{
+  background-color: #b9acdc;
+}
 div#menu-section
 {
   background-color: #70a9d1;
   position: relative;
   height: auto;
   border: 1px solid #000000;
-  padding-top: 30px;
+  padding-top: 40px;
   color: #ffffff;
   font-family: fantasy, cursive, serif;
   font-size: 150%;
 }
 
+/*********************************************************************
+              Formating sections
+ *********************************************************************/
+section
+{
+  position: relative;
+}
 p
 {
   width: 95%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 15px;
+  margin:auto;
 }
-body
-{
-  background-color: #b9acdc;
-}
- /*********************************************************************
-    Section title formatting
- *********************************************************************/
+/*********************************************************************
+                    Section title formatting
+*********************************************************************/
+ 
 #appetizer-title
 {
   position: absolute;
   right: -1px;
-  top: -25px;
+  top: -1px;
   background-color: #a3ec9c;
   border: 1px solid #000000;
-  width: 200px;
+  width: 175px;
   padding: 5px;
   text-align: center;
   font-family: serif;
   font-weight: bolder;
   color: #9c20a8;
 }
-
 #entree-title
 {
   position: absolute;
   right: -1px;
-  top: -25px;
+  top: -1px;
   background-color: #e14444;
   border: 1px solid #000000;
-  width: 200px;
+  width: 175px;
   padding: 5px;
   text-align: center;
   font-family: serif;
   font-weight: bolder;
   color: #c9c4f6;
 }
-
 #desert-title
 {
   position: absolute;
   right: -1px;
-  top: -25px;
+  top: -1px;
   background-color: #ffeb6d;
   border: 1px solid #000000;
-  width: 200px;
+  width: 175px;
   padding: 5px;
   text-align: center;
   font-family: serif;
   font-weight: bolder;
   color: #ff006c;
 }
-
 #price
 {
   float: right;
 }
-
 .row 
 {
   width: 100%;
@@ -115,7 +113,8 @@ body
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 
   {
     float: left;
-    margin: 10px;
+    height: auto;
+    margin: 8px;
   }
   .col-lg-1 
   {
@@ -170,12 +169,13 @@ body
 /********************************************************************************
  *                                TABLET DEVICES
  * ******************************************************************************/
-@media (min-width: 768px) and (max-width: 991px) 
+@media (min-width: 768px) and (max-width: 991.9px) 
 {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 
   {
     float: left;
-    margin: 10px;
+    height: auto;
+    margin: 3px;
   }
   .col-md-1 
   {
@@ -230,12 +230,13 @@ body
 /********************************************************************************
  *                                MOBILE DEVICES
  * ******************************************************************************/
-@media (max-width: 767px) 
+@media (max-width: 767.9px) 
 {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 
   {
     float: left;
-    margin: 10px;
+    margin: 5px;
+    height: auto;
   }
   .col-sm-1 
   {
@@ -289,43 +290,57 @@ body
 </style>
 </head>
 <body>
-<h1>OUR MENU</h1>
+  <h1>OUR MENU</h1>
 
-<div id="menu" class="row">
-
-  <div id="menu-section" class= "col-lg-4 col-md-6 col-sm-12">
-      <p id="appetizer-title">APPETIZERS</p>
-      <div id="menu-items">
-        <p id="appetizer1">Appetizer 1<span id="price">$ 8</span></p>
-        <p id="appetizer2">Appetizer 2<span id="price">$ 10</span></p>
-        <p id="appetizer3">Appetizer 3<span id="price">$ 12</span></p>
-        <p id="appetizer4">Appetizer 4<span id="price">$ 14</span></p>
+  <div id="menu" class="row">
+    
+    <section id="appetizers" class="col-lg-4 col-md-6 col-sm-12">  
+      <div id="menu-section">
+          <div id="appetizer-title">
+            APPETIZERS
+          </div>
+          
+          <div id="menu-items">
+            <p id="appetizer1">Appetizer 1<span id="price">$ 8</span></p>
+            <p id="appetizer2">Appetizer 2<span id="price">$ 10</span></p>
+            <p id="appetizer3">Appetizer 3<span id="price">$ 12</span></p>
+            <p id="appetizer4">Appetizer 4<span id="price">$ 14</span></p>
+          </div>
       </div>
-  </div>
+    </section>
+    
 
-  <div id="menu-section" class= "col-lg-4 col-md-6 col-sm-12">
-      <p id="entree-title">ENTREE</p>
-      <div id="menu-items">
-        <p id="entree1">Entree 1<span id="price">$ 15</span></p>
-        <p id="entree2">Entree 2<span id="price">$ 20</span></p>
-        <p id="entree3">Entree 3<span id="price">$ 25</span></p>
-        <p id="entree4">Entree 4<span id="price">$ 30</span></p>
+     <section id="entrees" class="col-lg-4 col-md-6 col-sm-12">  
+      <div id="menu-section">
+          <div id="entree-title">
+            ENTREES
+          </div>
+          
+          <div id="menu-items">
+            <p id="entree1">Entree 1<span id="price">$ 15</span></p>
+            <p id="entree2">Entree 2<span id="price">$ 20</span></p>
+            <p id="entree3">Entree 3<span id="price">$ 25</span></p>
+            <p id="entree4">Entree 4<span id="price">$ 30</span></p>
+          </div>
       </div>
-  </div>
+    </section>
 
-  <div id="menu-section" class= "col-lg-4 col-md-6 col-sm-12">
-      <p id="desert-title">DESERTS</p>
-      <div id="menu-items">
-        <p id="desert1">Desert 1<span id="price">$ 7</span></p>
-        <p id="desert2">Desert 2<span id="price">$ 10</span></p>
-        <p id="desert3">Desert 3<span id="price">$ 11</span></p>
-        <p id="desert4">Desert 4<span id="price">$ 13</span></p>
+    <section id="deserts" class="col-lg-4 col-md-6 col-sm-12">
+      <div id="menu-section">
+          <div id="desert-title">
+            DESERTS
+          </div>
+          
+          <div id="menu-items">
+            <p id="desert1">Desert 1<span id="price">$ 7</span></p>
+            <p id="desert2">Desert 2<span id="price">$ 10</span></p>
+            <p id="desert3">Desert 3<span id="price">$ 11</span></p>
+            <p id="desert4">Desert 4<span id="price">$ 13</span></p>
+          </div>
       </div>
+    </section>
   </div>
-
-</div>
-
-
 
 </body>
+
 </html>
